@@ -9,6 +9,8 @@
      neofetch
      neovim
      htop
+#    Browsers
+     brave
      librewolf
   #  KDE plasma5
      libsForQt5.plasma-pa # Control de audio
@@ -20,9 +22,25 @@
      rustdesk
   #  Chat
      armcord
+     signal-desktop
+     whatsapp-for-linux
   #  Development tasks
      git
+     vscode
+  
   ];
+
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+    elisa
+    gwenview
+    okular
+    oxygen
+    khelpcenter
+    plasma-browser-integration
+    print-manager
+  ];
+
+  programs.adb.enable = true;
 
 
 # 2.2 channels

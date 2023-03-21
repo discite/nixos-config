@@ -15,7 +15,7 @@
       ];
     };
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
       # nvidia-drm.modeset=1 is required for some wayland compositors, e.g. sway
       modesetting.enable = true;
     };

@@ -6,7 +6,7 @@
   users.users.imurillus = {
     isNormalUser = true;
     description = "imurillus";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers"];
     packages = with pkgs; [];
   };
 
@@ -27,7 +27,23 @@
   };
 
 # 1.3 Service management
-# No configs at the moment
+# To allow tmpfs in run/user/id to use more space like in pip
+  services = {
+    logind.extraConfig = "RuntimeDirectorySize=4G";
+    openssh = {
+      enable = true;
+      settings = {
+#       require userpassword authentication
+        passwordAuthentication = true;
+        kbdInteractiveAuthentication = true;
+        permitRootLogin = "no";
+      };
+    };
+    udev.packages = [
+      pkgs.android-udev-rules
+    ];
+  };
+
 
 # 1.4 System maintenance
 # 1.4.3 Upgrading the system
