@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
-
 {
-  # nvidia
   hardware = {
     opengl = {
       enable = true;
@@ -15,9 +13,10 @@
       ];
     };
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
-      # nvidia-drm.modeset=1 is required for some wayland compositors, e.g. sway
-      modesetting.enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+    steam-hardware = {
+      enable = true;
     };
   };
 }

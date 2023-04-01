@@ -26,25 +26,6 @@
     };
   };
 
-# 1.3 Service management
-# To allow tmpfs in run/user/id to use more space like in pip
-  services = {
-    logind.extraConfig = "RuntimeDirectorySize=4G";
-    openssh = {
-      enable = true;
-      settings = {
-#       require userpassword authentication
-        passwordAuthentication = true;
-        kbdInteractiveAuthentication = true;
-        permitRootLogin = "no";
-      };
-    };
-    udev.packages = [
-      pkgs.android-udev-rules
-    ];
-  };
-
-
 # 1.4 System maintenance
 # 1.4.3 Upgrading the system
 # Allow autoupgrade   
@@ -55,4 +36,26 @@
     dates = "weekly"; 
     options = "--delete-older-than 30d";
   };
+
+# X.X Timezone
+  # Set your time zone.
+  time.timeZone = "America/Lima";
+
+# X.X Localization
+  # Select internationalisation properties.
+  i18n.defaultLocale = "es_PE.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "es_PE.UTF-8";
+    LC_IDENTIFICATION = "es_PE.UTF-8";
+    LC_MEASUREMENT = "es_PE.UTF-8";
+    LC_MONETARY = "es_PE.UTF-8";
+    LC_NAME = "es_PE.UTF-8";
+    LC_NUMERIC = "es_PE.UTF-8";
+    LC_PAPER = "es_PE.UTF-8";
+    LC_TELEPHONE = "es_PE.UTF-8";
+    LC_TIME = "es_PE.UTF-8";
+  };
+
+
 }
+
