@@ -1,46 +1,47 @@
 { config, pkgs, ... }:
 
 {
-# 2.1 nixos-rebuild.
-# Allow unfree packages
+  # 2.1 nixos-rebuild.
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-     niv  #To administrate management of packages in nix
-     neofetch
-     neovim
-     htop
-     tmux
-#    Browsers
-     brave
-     librewolf
-     chromium
-  #  KDE plasma5
-     libsForQt5.plasma-pa # Control de audio
-     libsForQt5.kio-gdrive # Google drive mediante FUSE en plasma 
-     #libsForQt5.xdg-desktop-portal-kde
-     pkgs.libsForQt5.krfb
-     libsForQt5.kdeconnect-kde
-  #  Encriptacion en REST
-     cryptomator
-     ocamlPackages.google-drive-ocamlfuse # workaround
-  #  Remote tasks
-     #rustdesk
-     #xdg-desktop-portal     
-  #  Chat
-     armcord
-     signal-desktop
-     whatsapp-for-linux
-  #  Development tasks
-     git
-     vscode
-  #  shitcoin
-     monero-cli
-     monero-gui
-     p2pool
-     xmrig
+    niv #To administrate management of packages in nix
+    neofetch
+    neovim
+    htop
+    tmux
+    #    Browsers
+    brave
+    librewolf
+    chromium
+    #  KDE plasma5
+    libsForQt5.plasma-pa # Control de audio
+    libsForQt5.kio-gdrive # Google drive mediante FUSE en plasma 
+    #libsForQt5.xdg-desktop-portal-kde
+    pkgs.libsForQt5.krfb
+    libsForQt5.kdeconnect-kde
+    #  Encriptacion en REST
+    cryptomator
+    ocamlPackages.google-drive-ocamlfuse # workaround
+    #  Remote tasks
+    #rustdesk
+    #xdg-desktop-portal     
+    #  Chat
+    armcord
+    signal-desktop
+    whatsapp-for-linux
+    #  Development tasks
+    git
+    vscode
+    nixpkgs-fmt
+    #  shitcoin
+    monero-cli
+    monero-gui
+    p2pool
+    xmrig
   ];
 
- # Install Steam and dependencies
+  # Install Steam and dependencies
   nixpkgs.config.packageOverrides = pkgs: {
     steam = pkgs.steam.override {
       extraPkgs = pkgs: with pkgs; [
@@ -82,7 +83,7 @@
   programs = {
     steam = {
       enable = true;
-  #    remotePlay.openFirewall = true;
+      #    remotePlay.openFirewall = true;
     };
     ssh.askPassword = "ksshaskpass";
   };

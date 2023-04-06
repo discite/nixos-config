@@ -1,17 +1,17 @@
 { config, pkgs, ... }:
 
 {
-# 1.1 Users and groups.
-# Define a user account. Don't forget to set a password with ‘passwd’.
+  # 1.1 Users and groups.
+  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.imurillus = {
     isNormalUser = true;
     description = "imurillus";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers"];
-    packages = with pkgs; [];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers" ];
+    packages = with pkgs; [ ];
   };
 
-# 1.2 Security
-# Use doas as replacing of sudo
+  # 1.2 Security
+  # Use doas as replacing of sudo
   security = {
     sudo.enable = false;
     rtkit.enable = true;
@@ -26,22 +26,22 @@
     };
   };
 
-# 1.4 System maintenance
-# 1.4.3 Upgrading the system
-# Allow autoupgrade   
-  system.autoUpgrade.enable = true;  
-# 1.4.5
+  # 1.4 System maintenance
+  # 1.4.3 Upgrading the system
+  # Allow autoupgrade   
+  system.autoUpgrade.enable = true;
+  # 1.4.5
   nix.gc = {
     automatic = true;
-    dates = "weekly"; 
+    dates = "weekly";
     options = "--delete-older-than 30d";
   };
 
-# X.X Timezone
+  # X.X Timezone
   # Set your time zone.
   time.timeZone = "America/Lima";
 
-# X.X Localization
+  # X.X Localization
   # Select internationalisation properties.
   i18n.defaultLocale = "es_PE.UTF-8";
   i18n.extraLocaleSettings = {

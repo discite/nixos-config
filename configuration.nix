@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ ./booting.nix
+    [
+      ./booting.nix
       ./environment.nix
       ./hardware-configuration.nix
       ./hardware.nix

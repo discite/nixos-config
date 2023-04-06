@@ -5,7 +5,7 @@
   boot = {
     loader = {
       systemd-boot.enable = true;
-  #   Enable autoresolution on bootloader
+      #   Enable autoresolution on bootloader
       systemd-boot.consoleMode = "auto";
       efi = {
         canTouchEfiVariables = true;
@@ -13,7 +13,7 @@
       };
     };
     initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
+      "/crypto_keyfile.bin" = null;
     };
     # Specify the kernel to use
     kernelPackages = pkgs.linuxPackages_6_2;

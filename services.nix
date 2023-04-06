@@ -2,8 +2,8 @@
 
 {
 
-# 1.3 Service management
-# To allow tmpfs in run/user/id to use more space like in pip
+  # 1.3 Service management
+  # To allow tmpfs in run/user/id to use more space like in pip
   services = {
     logind.extraConfig = "RuntimeDirectorySize=4G";
     #openssh = {
@@ -33,7 +33,7 @@
         gdm.enable = true;
         gdm.wayland = true;
         defaultSession = "plasmawayland";
-      };      
+      };
       desktopManager.plasma5 = {
         enable = true;
       };
