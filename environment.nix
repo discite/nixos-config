@@ -84,6 +84,7 @@
       enable = true;
   #    remotePlay.openFirewall = true;
     };
+    ssh.askPassword = "ksshaskpass";
   };
 
   # Some programs need SUID wrappers, can be configured further or are

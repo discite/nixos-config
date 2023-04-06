@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   hardware = {
     opengl = {
@@ -18,5 +18,9 @@
     steam-hardware = {
       enable = true;
     };
+    # high-resolution display
+    #video.hidpi.enable = false;
+    # Pipewire disable pulseaudio
+    pulseaudio.enable = false;
   };
 }

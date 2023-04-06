@@ -6,15 +6,15 @@
 # To allow tmpfs in run/user/id to use more space like in pip
   services = {
     logind.extraConfig = "RuntimeDirectorySize=4G";
-    openssh = {
-      enable = true;
-      settings = {
-        #require userpassword authentication
-        passwordAuthentication = true;
-        kbdInteractiveAuthentication = true;
-        permitRootLogin = "no";
-      };
-    };
+    #openssh = {
+    #  enable = true;
+    #  settings = {
+    #    #require userpassword authentication
+    #    passwordAuthentication = true;
+    #    kbdInteractiveAuthentication = true;
+    #    permitRootLogin = "no";
+    #  };
+    #};
     udev.packages = [
       pkgs.android-udev-rules
     ];
@@ -37,9 +37,20 @@
       desktopManager.plasma5 = {
         enable = true;
       };
+      desktopManager.gnome.enable = true;
       layout = "us";
       xkbVariant = "";
       videoDrivers = [ "nvidia" ];
     };
+    # Enable CUPS to print documents.
+    printing.enable = true;
+
   };
 }
+
+##AUDIO NEED TO RESEARCH MORE DEFAULT IN GNOME
+# Enable sound with pipewire.
+#  sound.enable = true;
+#  hardware.pulseaudio.enable = false;
+#  security.rtkit.enable = true;
+
