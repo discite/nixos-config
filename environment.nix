@@ -34,6 +34,11 @@
     git
     vscode
     nixpkgs-fmt
+    rust-analyzer
+    rustfmt
+    clippy
+    cargo
+    rustc
     #  shitcoin
     monero-cli
     monero-gui
@@ -67,15 +72,15 @@
   #  max-jobs = 2;
   #};
 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    elisa
-    #gwenview
-    okular
-    oxygen
-    khelpcenter
-    plasma-browser-integration
-    print-manager
-  ];
+  #environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  #  elisa
+  #  #gwenview
+  #  okular
+  #  oxygen
+  #  khelpcenter
+  #  plasma-browser-integration
+  #  print-manager
+  #];
 
   programs.adb.enable = true;
 

@@ -36,6 +36,15 @@
       };
       desktopManager.plasma5 = {
         enable = true;
+        excludePackages = with pkgs.libsForQt5; [
+           elisa
+           #gwenview
+           okular
+           oxygen
+           khelpcenter
+           plasma-browser-integration
+           print-manager
+         ];
       };
       desktopManager.gnome.enable = true;
       layout = "us";
