@@ -63,12 +63,6 @@
   # 1.4.3 Upgrading the system
   # Allow autoupgrade   
   system.autoUpgrade.enable = true;
-  # 1.4.5
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
 
   # Set your time zone.
   time.timeZone = "America/Lima";

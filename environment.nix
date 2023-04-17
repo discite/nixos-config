@@ -35,6 +35,13 @@
     lib.mkDefault = "x86_64-linux";
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+  nix.settings.auto-optimise-store = true;
+
   #nix.settings = {
   #  cores = 6;
   #  max-jobs = 2;
