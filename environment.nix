@@ -10,40 +10,18 @@
     neovim
     htop
     tmux
-    #    Browsers
-    brave
-    librewolf
-    chromium
     #  KDE plasma5
     libsForQt5.plasma-pa # Control de audio
     libsForQt5.kio-gdrive # Google drive mediante FUSE en plasma 
     #libsForQt5.xdg-desktop-portal-kde
-    pkgs.libsForQt5.krfb
+    libsForQt5.krfb
     libsForQt5.kdeconnect-kde
     #  Encriptacion en REST
     cryptomator
     ocamlPackages.google-drive-ocamlfuse # workaround
-    #  Remote tasks
+    ## Remote tasks
     #rustdesk
     #xdg-desktop-portal     
-    #  Chat
-    armcord
-    signal-desktop
-    whatsapp-for-linux
-    #  Development tasks
-    git
-    vscode
-    nixpkgs-fmt
-    rust-analyzer
-    rustfmt
-    clippy
-    cargo
-    rustc
-    #  shitcoin
-    monero-cli
-    monero-gui
-    p2pool
-    xmrig
   ];
 
   # Install Steam and dependencies

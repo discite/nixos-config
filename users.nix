@@ -7,7 +7,30 @@
     isNormalUser = true;
     description = "imurillus";
     extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers" ];
-    packages = with pkgs; [ ];
+    packages = with pkgs; [
+      #    Browsers
+      brave
+      librewolf
+      chromium
+      #  Chat
+      armcord
+      signal-desktop
+      whatsapp-for-linux
+      #  Development tasks
+      git
+      vscode
+      nixpkgs-fmt
+      rust-analyzer
+      rustfmt
+      clippy
+      cargo
+      rustc
+      ## shitcoin
+      # monero-cli
+      # monero-gui
+      # p2pool
+      # xmrig
+    ];
   };
 
   # 1.2 Security
