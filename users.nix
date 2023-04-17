@@ -8,7 +8,12 @@
     description = "imurillus";
     extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers" ];
     packages = with pkgs; [
-      #    Browsers
+      # CLI
+      neofetch
+      neovim
+      htop
+      tmux
+      # Browsers
       brave
       librewolf
       chromium
@@ -25,6 +30,11 @@
       clippy
       cargo
       rustc
+      # Encriptacion en REST
+      cryptomator
+      ocamlPackages.google-drive-ocamlfuse # workaround
+      ## Remote tasks
+      # rustdesk
       ## shitcoin
       # monero-cli
       # monero-gui
@@ -57,14 +67,12 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 30d";
+    options = "--delete-older-than 7d";
   };
 
-  # X.X Timezone
   # Set your time zone.
   time.timeZone = "America/Lima";
 
-  # X.X Localization
   # Select internationalisation properties.
   i18n.defaultLocale = "es_PE.UTF-8";
   i18n.extraLocaleSettings = {
@@ -78,7 +86,5 @@
     LC_TELEPHONE = "es_PE.UTF-8";
     LC_TIME = "es_PE.UTF-8";
   };
-
-
 }
 

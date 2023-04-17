@@ -6,22 +6,12 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     niv #To administrate management of packages in nix
-    neofetch
-    neovim
-    htop
-    tmux
     #  KDE plasma5
     libsForQt5.plasma-pa # Control de audio
     libsForQt5.kio-gdrive # Google drive mediante FUSE en plasma 
     #libsForQt5.xdg-desktop-portal-kde
     libsForQt5.krfb
     libsForQt5.kdeconnect-kde
-    #  Encriptacion en REST
-    cryptomator
-    ocamlPackages.google-drive-ocamlfuse # workaround
-    ## Remote tasks
-    #rustdesk
-    #xdg-desktop-portal     
   ];
 
   # Install Steam and dependencies

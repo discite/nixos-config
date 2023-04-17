@@ -37,16 +37,16 @@
       desktopManager.plasma5 = {
         enable = true;
         excludePackages = with pkgs.libsForQt5; [
-           elisa
-           #gwenview
-           okular
-           oxygen
-           khelpcenter
-           plasma-browser-integration
-           print-manager
-         ];
+          elisa
+          #gwenview
+          okular
+          oxygen
+          khelpcenter
+          plasma-browser-integration
+          print-manager
+        ];
       };
-      desktopManager.gnome.enable = true;
+      desktopManager.gnome.enable = false;
       layout = "us";
       xkbVariant = "";
       videoDrivers = [ "nvidia" ];
