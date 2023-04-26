@@ -33,6 +33,10 @@
       # Encriptacion en REST
       cryptomator
       ocamlPackages.google-drive-ocamlfuse # workaround
+      gnome.nautilus
+      gnome.geary
+      gnome-online-accounts
+      gnome.gnome-control-center
       ## Remote tasks
       # rustdesk
       ## shitcoin

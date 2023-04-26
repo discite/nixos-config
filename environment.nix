@@ -61,6 +61,7 @@
 
   # Enable Steam as a program
   programs = {
+    xwayland.enable = true;
     steam = {
       enable = true;
       #    remotePlay.openFirewall = true;
