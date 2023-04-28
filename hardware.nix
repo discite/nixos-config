@@ -13,7 +13,8 @@
       ];
     };
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
+      modesetting.enable = true;
     };
     steam-hardware = {
       enable = true;
