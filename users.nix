@@ -8,42 +8,6 @@
     description = "imurillus";
     extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers" ];
     packages = with pkgs; [
-      # CLI
-      neofetch
-      neovim
-      htop
-      tmux
-      # Browsers
-      brave
-      librewolf
-      chromium
-      #  Chat
-      armcord
-      signal-desktop
-      whatsapp-for-linux
-      #  Development tasks
-      git
-      vscode
-      nixpkgs-fmt
-      rust-analyzer
-      rustfmt
-      clippy
-      cargo
-      rustc
-      # Encriptacion en REST
-      cryptomator
-      ocamlPackages.google-drive-ocamlfuse # workaround
-      gnome.nautilus
-      gnome.geary
-      gnome-online-accounts
-      gnome.gnome-control-center
-      ## Remote tasks
-      # rustdesk
-      ## shitcoin
-      # monero-cli
-      # monero-gui
-      # p2pool
-      # xmrig
     ];
   };
 

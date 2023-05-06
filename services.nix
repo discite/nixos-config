@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
-
 {
-
   # 1.3 Service management
   # To allow tmpfs in run/user/id to use more space like in pip
   services = {
@@ -30,21 +28,20 @@
     xserver = {
       enable = true;
       displayManager = {
-        gdm.enable = true;
-        gdm.wayland = true;
+        sddm.enable = true;
         defaultSession = "plasmawayland";
       };
       desktopManager.plasma5 = {
         enable = true;
-        excludePackages = with pkgs.libsForQt5; [
-          elisa
+        #excludePackages = with pkgs.libsForQt5; [
+          #elisa
           #gwenview
-          okular
-          oxygen
-          khelpcenter
-          plasma-browser-integration
-          print-manager
-        ];
+          #okular
+          #oxygen
+          #khelpcenter
+          #plasma-browser-integration
+          #print-manager
+        #];
       };
       desktopManager.gnome.enable = false;
       layout = "us";
@@ -53,7 +50,18 @@
     };
     # Enable CUPS to print documents.
     printing.enable = true;
-
+    # Firmware Update daemon
+    fwupd.enable = true;
+    #syncthing = {
+    #    enable = true;
+    #    user = "imurillus";
+    #    dataDir = "/mnt/shared/Defecto";    # Default folder for new synced folders
+    #    configDir = "/home/imurillus/.config/syncthing";   # Folder for Syncthing's settings and keys
+    #    extraOptions.gui = {
+    #      user = "imurillus";
+    #      password = "changeme";
+    #    };
+    #};
   };
 }
 

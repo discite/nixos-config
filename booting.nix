@@ -3,6 +3,8 @@
 {
   # Bootloader.
   boot = {
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ ];
     loader = {
       systemd-boot.enable = true;
       #   Enable autoresolution on bootloader
@@ -12,13 +14,26 @@
         efiSysMountPoint = "/boot/efi";
       };
     };
-    initrd.secrets = {
-      "/crypto_keyfile.bin" = null;
-    };
     # Specify the kernel to use
     kernelPackages = pkgs.linuxPackages_6_3;
-    # Enable swap on luks
-    initrd.luks.devices."luks-9974056c-5b3b-42f3-b668-544f7dbfd0a4".device = "/dev/disk/by-uuid/9974056c-5b3b-42f3-b668-544f7dbfd0a4";
-    initrd.luks.devices."luks-9974056c-5b3b-42f3-b668-544f7dbfd0a4".keyFile = "/crypto_keyfile.bin";
+    initrd = {
+      secrets = {
+        "/crypto_keyfile.bin" = null;
+      };
+      availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+      kernelModules = [ ];
+      luks = {
+        devices = {
+          # Enable swap on luks
+          "luksSWAP" = {
+            device = "/dev/disk/by-partlabel/SWAP";
+            keyFile = "/crypto_keyfile.bin";
+          };
+          "luksROOT" = {
+            device = "/dev/disk/by-partlabel/ROOT";
+          };
+        };
+      };
+    };
   };
 }

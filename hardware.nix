@@ -13,15 +13,18 @@
       ];
     };
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.production;
-      modesetting.enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      modesetting.enable = false;
     };
     steam-hardware = {
       enable = true;
     };
-    # high-resolution display
-    #video.hidpi.enable = false;
     # Pipewire disable pulseaudio
     pulseaudio.enable = false;
+    cpu = {
+      intel = {
+        updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+      };
+    };
   };
 }

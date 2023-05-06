@@ -9,11 +9,18 @@
     [
       ./booting.nix
       ./environment.nix
+      ./filesystems.nix
       ./hardware-configuration.nix
       ./hardware.nix
-      ./network.nix
+      ./home-manager.nix
+      ./networking.nix
+      ./nixpkgs.nix
+      ./power-management.nix
+      ./programs.nix
       ./services.nix
+      ./swap-devices.nix
       ./users.nix
+      <home-manager/nixos>
     ];
 
   # This value determines the NixOS release from which the default
