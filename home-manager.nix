@@ -13,6 +13,8 @@
       neofetch
       tree
       doas-sudo-shim
+      # Software Defined Radio
+      gnuradio
       # Browsers
       brave
       #  Chat

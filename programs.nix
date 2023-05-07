@@ -1,15 +1,15 @@
 { config, pkgs, ... }:
 
 {
-  programs.adb.enable = true;
-
   # Enable Steam as a program
   programs = {
-    xwayland.enable = true;
+    adb.enable = true;
     steam = {
       enable = true;
       #    remotePlay.openFirewall = true;
     };
+    dconf.enable = true; #For some Gnome programs like gnuradio
+    xwayland.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
