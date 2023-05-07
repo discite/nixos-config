@@ -61,6 +61,14 @@
         userName  = "imurillus";
         userEmail = "4948877+discite@users.noreply.github.com";
       };
+      vscode = {
+        enable = true;
+        extensions = with pkgs; [
+          vscode-extensions.ms-python.python
+          vscode-extensions.svelte.svelte-vscode
+        ];
+        userSettings = {};
+      };
     };
     home.stateVersion = "22.11";
   };
