@@ -28,21 +28,19 @@
       hunspellDicts.en-us-large
       #  Development tasks
       kate
-      #git
-      #vscode
-      #nixpkgs-fmt
-      #rust-analyzer
-      #rustfmt
-      #clippy
-      #cargo
-      #rustc
+      nixpkgs-fmt
+      rust-analyzer
+      rustfmt
+      clippy
+      cargo
+      rustc
       # Encriptacion en REST
       veracrypt
       libsForQt5.kio-gdrive # Google drive mediante FUSE en plasma
       cryptomator
       ocamlPackages.google-drive-ocamlfuse # workaround
       ## Remote tasks
-      # rustdesk
+      rustdesk
       ## shitcoin
       # monero-cli
       # monero-gui
