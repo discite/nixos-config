@@ -66,6 +66,9 @@
         extensions = with pkgs; [
           vscode-extensions.ms-python.python
           vscode-extensions.svelte.svelte-vscode
+          vscode-extensions.rust-lang.rust-analyzer
+          vscode-extensions.arrterian.nix-env-selector
+          vscode-extensions.jnoortheen.nix-ide
         ];
         userSettings = {};
       };
