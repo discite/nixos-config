@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   # 1.1 Users and groups.
@@ -6,9 +6,7 @@
   users.users.imurillus = {
     isNormalUser = true;
     description = "imurillus";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers" ];
-    packages = with pkgs; [
-    ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "adbusers" "libvirtd" ];
   };
 
   # 1.2 Security

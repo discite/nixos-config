@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ lib, ... }:
 {
   powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home-manager.users.imurillus = { pkgs, ... }: {
@@ -46,6 +46,8 @@
       # monero-gui
       # p2pool
       # xmrig
+      ## Virtualization
+      virt-manager
     ];
     programs = {
       htop.enable = true;

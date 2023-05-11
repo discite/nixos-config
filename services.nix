@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   # 1.3 Service management
   # To allow tmpfs in run/user/id to use more space like in pip
