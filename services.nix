@@ -29,7 +29,11 @@
       enable = true;
       displayManager = {
         sddm.enable = true;
-        defaultSession = "plasmawayland";
+        defaultSession = "plasma";
+        # gdm = {
+        #   wayland = true;
+        #   enable = true;
+        # };
       };
       desktopManager.plasma5 = {
         enable = true;

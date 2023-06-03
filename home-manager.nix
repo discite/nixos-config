@@ -22,6 +22,7 @@
       signal-desktop
       whatsapp-for-linux
       # Ofimatic
+      joplin-desktop
       libreoffice-qt
       hunspell
       hunspellDicts.es_PE
@@ -29,11 +30,11 @@
       #  Development tasks
       kate
       nixpkgs-fmt
-      rust-analyzer
-      rustfmt
-      clippy
-      cargo
-      rustc
+      #rust-analyzer
+      #rustfmt
+      #clippy
+      #cargo
+      #rustc
       # Encriptacion en REST
       veracrypt
       libsForQt5.kio-gdrive # Google drive mediante FUSE en plasma
@@ -63,17 +64,17 @@
         userName  = "imurillus";
         userEmail = "4948877+discite@users.noreply.github.com";
       };
-      vscode = {
-        enable = true;
-        extensions = with pkgs; [
-          vscode-extensions.ms-python.python
-          vscode-extensions.svelte.svelte-vscode
-          vscode-extensions.rust-lang.rust-analyzer
-          vscode-extensions.arrterian.nix-env-selector
-          vscode-extensions.jnoortheen.nix-ide
-        ];
-        userSettings = {};
-      };
+      #vscode = {
+      #  enable = true;
+      #  extensions = with pkgs; [
+      #    vscode-extensions.ms-python.python
+      #    vscode-extensions.svelte.svelte-vscode
+      #    vscode-extensions.rust-lang.rust-analyzer
+      #    vscode-extensions.arrterian.nix-env-selector
+      #    vscode-extensions.jnoortheen.nix-ide
+      #  ];
+      #  userSettings = {};
+      #};
     };
     home.stateVersion = "22.11";
   };
