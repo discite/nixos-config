@@ -16,6 +16,9 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
     };
+    bluetooth = {
+      enable = true;
+    };
     steam-hardware = {
       enable = true;
     };
