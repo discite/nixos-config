@@ -3,7 +3,7 @@
 {
   virtualisation = {
     libvirtd = {
-      enable = true;
+      enable = false;
     };
   };
 }

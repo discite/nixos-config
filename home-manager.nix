@@ -48,7 +48,7 @@
       # p2pool
       # xmrig
       ## Virtualization
-      virt-manager
+      #virt-manager
     ];
     programs = {
       htop.enable = true;
